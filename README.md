@@ -40,7 +40,7 @@ Mainly responsible for server development. He has worked in well-known Chinese c
 
 
 
-Zhang Haitong 
+Dylan Luo 
 
 Server & Android engineer
 
@@ -48,7 +48,7 @@ Mainly responsible for server-side development and Android development. He has e
 
 
 
-Yang Yiquan
+Ken yang
 
 Business Process Expert & Project manager
 

@@ -1,6 +1,6 @@
-# 联系我们
+# Contact Us
 
-## 刘旭东
+## Liu Xudong
 
-- 手机号码：1345678
-- 微　　信：通手机号
+- Mobile：1345678
+- WeChat：The same as mobile number
