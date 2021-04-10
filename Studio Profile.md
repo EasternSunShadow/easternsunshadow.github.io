@@ -2,25 +2,25 @@
 
 Anton Homebrew Software Studio (We) was established in 2020. The outbreak of Covid-19 has disrupted our steady pace of work and life. This inspires us to rethink the possibility of breaking through the limitations of location and time, and exert the professional capabilities of Chinese software developers to serve companies around the world. 
 
-## What we are good at
+## What We are Good at
 
 Mobile development: We have many years of mobile development experience, whether it is iOS or Android, we can quickly realize it according to your ideas.
 
-Server development: We use Java-developed server services, which have been running stably on multiple projects in multiple fields. Stable and secure services are what we value most.
+Server development: The background services we developed based on java have been running stably on multiple projects in multiple fields. Stable and secure services are always the top priority on our list.
 
 Technical consultation: We provide free and reliable technical consultation to help you organize product functions, reduce unnecessary troubles, and accelerate your business plan.
 
-## How we serve our customers
+## How We Serve Our Customers
 
-Our team has a fast and stable development process, and can maintain a stable output rhythm from demand combing to development, testing, and launch. 
+Our team has a fast and constant development process that could ensure us to maintain a stable output rhythm including demand analyze, development, testing and the official launch. 
 
-Of course completing these is not the end of our task. When there is a problem with the online product, we will investigate and fix the error as soon as possible, to solve the worries of the customer.
+Of course, completing the above whole flow does not mark the end of our service. When encountering problems with the online product, we will investigate and fix the error as soon as possible to assure our customers without worries behind.
 
-While providing customers with high-quality software services, we will think like our customers do, allocate resources reasonably,  save money and time for our customers.
+All from the customer's prospective, While providing high-quality software services, we will also allocate resources properly, save money and time for our customers efficiently.
 
-## Why choose us
+## Why Choose Us
 
-Free and permanent software bug fixes
+Free and permanent software bug fixes service
 
 Free one-to-one software consultation
 
@@ -30,23 +30,23 @@ Solid and reliable development experience
 
 Serious and responsible work attitude
 
-## Mainly team members
+## Main Team Members
 
-Our team members all graduated from software engineering majors in top universities in China. Rooted in Shenzhen, we have rich experience in development, and our works involved in e-commerce, banking, games, and other industries.
+Our team members all graduated from software engineering majors in top universities in China. Rooted in Shenzhen, we have rich experience in development, and our works involved in e-commerce, banking, games and other industries.
 
 
 
 Liu Xudong 
 
-Project manager & iOS engineer
+Project Manager & iOS Engineer
 
-Mainly responsible for customer docking, project management and team management. He has worked in many start-up companies and has completed many projects from 0 to 1. Meanwhile, he also has rich experience in iOS development, especially good at small and medium size project.
+Mainly responsible for customer communication, project management and team management. He has worked in many start-up companies and has succeed in completing many projects from 0 to 1. Meanwhile, he also has rich experience in iOS development, especially skilled in small and medium size software project.
 
 Li Xiaojie 
 
-Senior server engineer & Android engineer
+Senior Server Engineer & Android Engineer
 
-Mainly responsible for customer docking, project management, and team management. He has worked in many start-up companies and has completed many projects from 0 to 1. Meanwhile, he also has rich experience in iOS development, especially good at small and medium-size projects.
+Mainly responsible for server development. He has worked in well-known Chinese companies such as SF Technology and Ping An Insurance Group. Having extensive experience in team management of 10+ people, he is excel in business development and enterprise-level architecture construction.
 
 
 
