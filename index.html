@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title id="title">cohome</title>
+    <link rel="stylesheet" type="text/css" href="static/base.css" >
+    <script src="static/vue.min.js"></script>
+    <script src="static/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:image" content="static/origin-969.png" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CoHome" />
+    <meta name="twitter:image" content="static/origin-969.png">
+  </head>
+  <body>
+    <div class="content">
+        <div class="top">
+          <div class="logo">
+            <a href="https://www.cohome.com" target="_blank"><img src="static/logo.png"></a>
+          </div>
+          <div class="asd"></div>
+          <div class="open"><a :href="'cohome://open?code='+code">Open in app...</a></div>
+        </div>
+        <div class="propaganda">
+          <p>Don't have a Cohome account?</p>
+          <p>Get the app to request early access!</p>
+          <a href="https://apps.apple.com/us/app/cohome/id1573097731"><img src="static/store.png" alt=""></a>
+        </div>
+        <div class="propaganda_pc">
+          <p>Don't have a Cohome account?</p>
+          <p>Get the app to request early access!</p>
+          <a href="https://apps.apple.com/us/app/cohome/id1573097731"><img src="static/store.png" alt=""></a>
+        </div>
+        <div class="card">
+          <div class="card_box">
+            <!-- event start-->
+            <div class="event" v-if="event">
+              <div class="card_message">
+                <div class="card_info">
+                  <p class="card_info_name">{{data.name}}</p>
+                  <div class="card_info_from conversation_mrg"><span>{{data.clubInfo.clubName}}</span><div class="card_info_from_icon"><img src="static/from.png" width="16"></div></div>
+                </div>
+                <div class="card_pic">
+                  <img :src="host+data.image" width="100%">
+                </div>
+              </div>
+              <div class="card_seat">
+                <div class="card_seat_info">
+                  <div class="card_seat_info_item csiiborder"><span class="csiimr"><img src="static/Icon_clock@2x.png" width="12"></span>{{data.starttime}}-{{data.endAt}}</div>
+                  <div class="card_seat_info_item csiiborder"><span><img src="static/Icon_calendar@2x.png" width="12"></span>{{data.time}}</div>
+                  <div class="card_seat_info_item"><span><img src="static/Icon_user@2x.png" width="12"></span>
+                    <span style="margin:0" v-if="data.userNumber">{{data.userNumber}}</span>
+                    <span style="margin:0" v-if="!data.userNumber">0</span>
+                  </div>
+                </div>
+                <div class="card_seat_address" v-if="!data.online">
+                  <span><img src="static/Icon_flag@2x.png" width="12"></span>
+                  {{data.address}}
+                </div>
+                 <div class="card_seat_address" v-if="data.online">
+                  <span><img src="static/Icon_link@2x.png" width="12"></span>
+                  <a :href="data.addressh" target="_blank" class="card_seat_address_link">{{data.address}}</a>
+                </div>
+              </div>
+            </div>
+            <!-- event end-->
+            <!-- conversation start-->
+            <div class="conversation" v-if="conversation">
+              <span class="card_tip">{{data.topicInfo.name}}</span>
+              <div class="card_message">
+                <div class="card_info">
+                  <p class="card_info_name">{{data.name}}</p>
+                  <div class="card_info_from conversation_mrg" v-if="data.clubInfo">
+                    <span title="12">{{data.clubInfo.clubName}}</span> <div class="card_info_from_icon"><img src="static/from.png" width="16"></div></div>
+                  <div class="card_info_desc">{{data.description}}</div>
+                </div>
+                <div class="card_pic" v-if="data.image">
+                  <img :src="host+data.image" width="100%">
+                </div>
+              </div>
+              <div class="card_ownerProfile">
+                <div class="card_ownerProfile_pic">
+                  <img :src="host+data.ownerProfile.pic" width="100%">
+                </div>
+                <div class="card_ownerProfile_name">
+                  <p>{{data.ownerProfile.userName}} <br> <span>Post on {{data.topicInfo.createTime}}</span></p>
+                </div>
+              </div>
+              <div class="card_seat">
+                <div class="card_seat_info">
+                  <div class="card_seat_site_item">
+                    <p>Option <br><span>{{data.occupancy}}</span></p>
+                  </div>
+                  <div class="card_seat_site_clear"></div>
+                  <div class="card_seat_site_item">
+                    <p>Participant <br><span>{{data.investorType}}</span></p>
+                  </div>
+                  <div class="card_seat_site_clear"></div>
+                  <div class="card_seat_site_item">
+                    <p>City <br><span>{{data.cityInterested}}</span></p>
+                  </div>
+                </div>
+                <div class="card_whole" v-if="data.investedAmount">
+                  <div class="card_step" :style="'width:'+(data.investedProgress)+'%'"></div>
+                </div>
+                <div class="card_speed" v-if="data.investedAmount">
+                  <p>{{data.investedProgress}}% <span>${{data.completeAmount}} / ${{data.investedAmount}}</span></p>
+                </div>
+              </div>
+            </div>
+            <!-- conversation end-->
+            <!-- user start-->
+            <div class="user" v-if="user">
+              <div class="user_pic">
+                <img :src="host+data.pic" width="100%" v-if="data.pic">
+                <div class="user_temp" v-if="!data.pic"></div>
+              </div>
+              <div class="user_info">
+                <p class="user_info_name">{{data.userName}}</p>
+                <p class="user_info_email">{{data.company}}</p>
+                <div class="user_info_follow">
+                  <div class="user_info_follow_item">{{data.follower}} <span>followers</span></div>
+                  <div class="user_info_follow_item">{{data.following}} <span>following</span></div>
+                </div>
+              </div>
+            </div>
+            <!-- user end-->
+          </div>
+        </div>
+        <div class="Calendar"  v-if="event">
+          <p><a href="calshow://" style="color: #8a8a8a">Add to<span><img src="static/apple.png" width="16"></span>Apple Calendar</a></p>
+        </div>
+        <div class="Variable"></div>
+        <div class="footer"><a href="cohome://open">Already on Cohome?</a></div>
+    </div>
+
+    <script>
+      var vm = new Vue({
+        el: '.content',
+        data: {
+          title:'',
+          event:false,
+          conversation:false,
+          user:false,
+          code:'open',
+          host:'http://120.77.168.124:8080',
+          url:'http://120.77.168.124:8080/meet-club/api/v1/promotions/',
+          data:[]
+        },
+        created: function () {
+          if(this.getUrlCode().code){
+            this.code = this.getUrlCode().code;
+            this.getEncryptedkey()
+            
+           
+          
+          }
+        },
+        mounted: function () {
+          
+        },
+        methods: {
+          getUrlCode() { 
+            var url = location.search
+            this.winUrl = url
+            var theRequest = new Object()
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1)
+                var strs = str.split("&")
+                for(var i = 0; i < strs.length; i ++) {
+                    theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1])
+                }
+            }
+            return theRequest
+          },
+          format_number(n) {
+              var b = parseInt(n).toString();
+              var len = b.length;
+              if (len <= 3) { return b; }
+              var r = len % 3;
+              return r > 0 ? b.slice(0, r) + "," + b.slice(r, len).match(/\d{3}/g).join(",") : b.slice(r, len).match(/\d{3}/g).join(",");
+          },
+          getTime(getTime){
+             let gTime = new Date(getTime*1000);
+             let time = gTime.toDateString().split(' ');
+             time.shift()
+             return time.join(" ");
+          },
+          checkHttp(url){
+            let short = url.substring(0,4);
+            if(short.indexOf("http")==-1){
+        　　　　return 'http://'+ url;
+        　　 }else{
+                return url;
+            }
+          },
+          getTimeType(getTimeType){
+              let now= new Date(getTimeType*1000);
+              let h = now.getHours();
+              let m = now.getMinutes();
+              let str;
+              if(h>12) {
+                  h -= 12;
+                  str = " PM";
+              }else{
+                  str = " AM";
+              }
+              m = m < 10 ? '0'+m :m;
+              let time =  h + ":" + m +str;
+              return time;
+          },
+          getEncryptedkey() {
+            let that = this;
+            $.ajax({
+                type: "GET",
+                url: that.url+that.code,
+                success: function(res){
+                    console.log(res)
+                    if (res.code == 200000) {
+                      let title = document.getElementById("title");
+                      let data = res.data;
+                      if(data.type == 'conversation'){
+                        that.data = data.conversation;
+                        if(that.data.investedAmount != 0) {
+                          that.data.completeAmount = parseInt((that.data.investedProgress/100) * that.data.investedAmount);
+                          that.data.topicInfo.createTime = that.getTime(that.data.topicInfo.createTime)
+                          if(that.data.investedAmount > 0){
+                            that.data.investedAmount = that.format_number(that.data.investedAmount)
+                            that.data.completeAmount = that.format_number(that.data.completeAmount)
+                          }
+                        }
+                        that.conversation = true;
+                        //that.title = that.data.name;
+                        document.title = that.data.name;
+                      }else if(data.type == 'event'){
+                        that.data = data.event;
+                        that.data.starttime = that.data.time;
+                        that.data.starttime = that.getTimeType(that.data.starttime);
+                        that.data.endAt = that.getTimeType(that.data.endAt);
+                        that.data.time = that.getTime(that.data.time);
+                        that.data.addressh = that.checkHttp(that.data.address)
+                        that.event = true;
+                        that.title = that.data.name;
+                        //title.innerHTML = that.data.name;
+                        document.title = that.data.name;
+                      }else if(data.type == 'people'){
+                        that.propaganda =  {margin:"30% 0 0"};
+                        that.data = data.people;
+                        that.user = true;
+                        that.title = that.data.userName;
+                        //title.innerHTML =that.data.userName;
+                        document.title = that.data.userName;
+                      }else{
+
+                      }
+                      let viewport = document.querySelectorAll("meta");
+                      viewport[6].setAttribute('content',that.title);
+                      // let location = window.location.href;
+                      // viewport[7].setAttribute('content',location);
+                    }else{
+                      console.log(res.msg)
+                    }
+                }
+            });
+          }
+        }
+      });
+
+  
+    </script> 
+  </body>
+</html>

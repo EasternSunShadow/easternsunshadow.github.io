@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+body {
+  background: #f2f0e4;
+  font-family: Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+}
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  border-bottom: 1px solid #e5e3d7;
+}
+
+.logo {
+  width: 20%;
+  margin: 2% 5%;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.asd {
+  flex: 1;
+}
+
+.open {
+  font-size: 12px;
+  font-weight: 600;
+  width: 23%;
+  margin: 4% 0;
+}
+
+.open a {
+  color: #7dab89;
+}
+
+.propaganda {
+  text-align: center;
+  font-weight: 600;
+  margin-top:10%;
+}
+
+.propaganda p {
+  font-size: 16px;
+}
+
+.propaganda img {
+  width: 40%;
+  margin: 5% 0;
+}
+
+.propaganda_pc {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10%;
+  display: none;
+}
+
+.propaganda_pc p {
+  font-size: 16px;
+}
+
+.propaganda_pc img {
+  width: 40%;
+  margin-top: 5%;
+}
+
+.card {
+  width: 92%;
+  margin: 4%;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 3px #d9d9d9;
+}
+
+.card_box {
+  padding: 5%;
+}
+
+.card_message {
+  display: flex;
+}
+
+.card_info {
+  flex: 1;
+  padding: 3%;
+}
+
+.card_info_name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card_info_from {
+  font-size: 14px;
+  display: flex;
+}
+
+.card_info_from  span {
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card_info_from_icon {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+}
+
+.card_pic {
+  width: 36%;
+  overflow: hidden;
+}
+
+.card_pic img {
+  border-radius: 16px;
+}
+
+.card_seat {
+  padding: 3%;
+  font-size: 12px;
+  color: #8a8a8a
+}
+
+.card_seat_info {
+  display: flex;
+  margin-bottom: 1%;
+}
+
+.card_seat_info_item {
+  white-space: nowrap;
+  padding-right: 2%;
+  flex: 1;
+}
+
+.card_seat_address {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card_seat_address a {
+  color: #8a8a8a;
+}
+.card_seat_address .card_seat_address_link {
+	text-decoration: underline;
+	color:#0000ee
+}
+
+.csiiborder {
+  border-right: 1px solid #8a8a8a;
+}
+
+.card_seat_info_item span {
+  margin: 0 5px;
+}
+
+.card_seat_info_item .csiimr {
+  margin-left: 0
+}
+
+/**/
+.card_tip {
+  padding: 3px 6px;
+  background: #ffc2fd;
+  margin: 3%;
+  font-size: 12px;
+  border-radius: 5px;
+  color: #000;
+}
+
+.card_info_desc {
+  font-size: 14px;
+  margin-top: 2%;
+}
+
+.conversation_mrg {
+  margin: 3% 0;
+}
+
+.card_ownerProfile {
+  display: flex;
+  padding: 3%;
+}
+
+.card_ownerProfile_pic {
+  width: 64px;
+  height: 64px;
+}
+
+.card_ownerProfile_pic img {
+  border-radius: 50%;
+}
+
+.card_ownerProfile_name {
+  font-size: 14px;
+  padding: 16px 10px;
+}
+
+.card_ownerProfile_name p span {
+  font-size: 12px
+}
+
+.card_seat_site_item {
+  flex: 1;
+  max-width: 30%;
+}
+
+.card_seat_site_item p span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+      width: 100%;
+    display: block;
+    overflow:hidden;
+	text-overflow:ellipsis;
+
+	white-space:nowrap;
+}
+
+.card_seat_site_clear {
+  width: 1px;
+  height: 10px;
+  margin: 10px;
+  background: #8a8a8a;
+}
+
+.card_whole {
+  width: 100%;
+  height: 5px;
+  background: #eee;
+  position: relative;
+  margin: 3% 0;
+}
+
+.card_whole .card_step {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #73b51a;
+}
+
+.card_speed {
+  font-size: 12px;
+}
+
+.card_speed span {
+  float: right;
+}
+
+
+/**/
+.user {
+  display: flex;
+  margin: 3% 0;
+}
+
+.user .user_pic {
+  width: 64px;
+  height: 64px;
+  margin-right: 5%;
+}
+
+.user .user_pic img {
+  border-radius: 20px;
+}
+
+.user .user_pic .user_temp {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+}
+
+.user .user_info {
+  font-size: 16px;
+  flex: 1;
+}
+
+.user .user_info .user_info_name {
+  font-weight: 600;
+}
+
+.user .user_info .user_info_email {
+  font-size: 14px;
+  margin: 2% 0;
+}
+
+.user .user_info .user_info_follow {
+  display: flex;
+  margin-top: 5%;
+}
+
+.user .user_info .user_info_follow_item {
+  font-weight: 600;
+  margin-right: 5%;
+}
+
+.user .user_info .user_info_follow_item span {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.Calendar {
+  text-align: center;
+}
+
+.Calendar p {
+  font-size: 14px;
+}
+
+.Calendar p span {
+  margin-left: 14px;
+  margin-right: 3px;
+}
+
+.footer {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 30%;
+  position: fixed;
+  bottom: 1%;
+  left: 50%;
+  width: 140px;
+  margin-left: -70px;
+}
+
+.footer a {
+  color: #000;
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+  .open {
+    width: 30%;
+  }
+
+  .Variable {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413px) {
+  .Variable {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+  }
+}
+
+@media (min-width: 620px) {
+  .open {
+    width: 14%;
+  }
+
+  .propaganda {
+    display: none;
+  }
+
+  .propaganda_pc {
+    display: block;
+  }
+}
